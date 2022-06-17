@@ -50,14 +50,14 @@ const clampDimensions = (width, height) => {
     if (height > MAXIMUM_HEIGHT) {
         const reducedWidth = Math.floor(rectifiedWidth * MAXIMUM_HEIGHT / height);
 
+        return [reducedWidth, MAXIMUM_HEIGHT];
 
     }
-        return [reducedWidth, MAXIMUM_HEIGHT];
-    }
+    
 
     if (width > MAXIMUM_WIDTH) {
         const reducedHeight = Math.floor(height * MAXIMUM_WIDTH / rectifiedWidth);
-    }
+    
         return [MAXIMUM_WIDTH, reducedHeight];
     }
     return [rectifiedWidth, height];
